@@ -1,10 +1,26 @@
 <!DOCTYPE html>
+
 <head>
+    <style>
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+    </style>
     <title>Datos del Proyecto</title>
 </head>
+
 <body>
     <h1>Datos recibidos del proyecto</h1>
     <ul id="datos-proyecto"></ul>
+    <li>ID proyecto: <input type="number" id="ID" name="ID" required></li>
+    <li>Nombre: <input type="text" id="Nombre" name="Nombre"></li>
+    <li>Tiempo estimado: <input type="datetime" id="Estimado" name="Estimado"></li>
+    <li>Tiempo real: <input type="datetime" id="Real" name="Real"></li>
+    <li>Coste: <input type="number" id="coste" name="coste" step="0.01" min="0" placeholder="0.00"></li>
+    <li>Observaciones: <input type="text" id="Observaciones" name="Observaciones"></li>
+    <li>Fecha de entrega: <input type="date" id="Fecha" name="Fecha"></li>
     <script src="registro.js"></script>
 </body>
+
 </html>
