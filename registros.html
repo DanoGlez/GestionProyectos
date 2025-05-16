@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Registros de Proyectos</title>
-  <script defer src="registros.js"></script>
+    <style>
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Datos del Proyecto</title>
 </head>
+
 <body>
-  <h1>Lista de Proyectos</h1>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre del proyecto</th>
-        <th>Tiempo estimado</th>
-        <th>Tiempo real</th>
-        <th>Coste</th>
-        <th>Observaciones</th>
-        <th>Fecha</th>
-      </tr>
-    </thead>
-    <tbody id="tabla-proyectos"></tbody>
-  </table>
+    <h1>Datos recibidos del proyecto</h1>
+    <ul id="datos-proyecto"></ul>
+    <li>ID proyecto: <input type="number" id="ID" name="ID" required></li>
+    <li>Nombre: <input type="text" id="Nombre" name="Nombre"></li>
+    <li>Tiempo estimado: <input type="datetime" id="Estimado" name="Estimado"></li>
+    <li>Tiempo real: <input type="datetime" id="Real" name="Real"></li>
+    <li>Coste: <input type="number" id="coste" name="coste" step="0.01" min="0" placeholder="0.00"></li>
+    <li>Observaciones: <input type="text" id="Observaciones" name="Observaciones"></li>
+    <li>Fecha de entrega: <input type="date" id="Fecha" name="Fecha"></li>
+    <script src="registro.js"></script>
 </body>
+
 </html>
