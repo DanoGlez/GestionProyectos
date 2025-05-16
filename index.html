@@ -1,41 +1,24 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
-    <title>Gestión de proyecto</title>
-    <script src="index.js"></script>
+  <meta charset="UTF-8">
+  <title>Gestión de proyecto</title>
+  <script defer src="index.js"></script>
 </head>
-
 <body>
-    <h1>Gestión de proyecto</h1>
-    <form method="post" action="registros.html">
-        <button type="button" id="btnCargarJSON"> Añadir </button>
-        <table border="1">
+  <h1>Gestión de Proyecto</h1>
+  
+  <div id="formularioNuevo">
+    <h2>Nuevo Proyecto</h2>
+    <label>ID: <input type="number" id="nuevoID" required></label><br>
+    <label>Nombre del proyecto: <input type="text" id="nuevoNombre" required></label><br>
+    <label>Tiempo estimado: <input type="number" id="nuevoEstimado" required></label><br>
+    <label>Tiempo real: <input type="number" id="nuevoReal" required></label><br>
+    <label>Coste: <input type="number" id="nuevoCoste" required></label><br>
+    <label>Observaciones: <input type="text" id="nuevoObservaciones"></label><br>
+    <label>Fecha: <input type="date" id="nuevaFecha" required></label><br><br>
 
-            <thead>
-                <tr>
-                    <th>ID Proyecto</th>
-                    <th>Nombre</th>
-                    <th>Tiempo estimado</th>
-                    <th>Tiempo real</th>
-                    <th>Coste</th>
-                    <th>Observaciones</th>
-                    <th>Fecha de entrega</th>
-                </tr>
-                <!-- <tr>
-            <td><input type="number" id="ID" name="ID" required></td>
-            <td><input type="text" id="Nombre" name="Nombre" required></td>
-            <td><input type="number" id="Estimado" name="Estimado" step="00.00" min="0" placeholder="0.00"></td>
-            <td><input type="number" id="Real" name="Real" step="00.00" min="0" placeholder="0.00"></td>
-            <td> 1h = <input type="number" id="coste" name="coste" step="0.01" min="0" placeholder="0.00"></td>
-            <td><input type="text" id="Observaciones" name="Observaciones" ></td>
-            <td><input type="date" id="Fecha" name="Fecha"></td>
-        </tr> -->
-            </thead>
-
-        </table>
-    </form>
-
-
+    <button id="btnGuardar">Guardar</button>
+  </div>
 </body>
-
 </html>

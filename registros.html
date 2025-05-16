@@ -1,10 +1,25 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Datos del Proyecto</title>
+  <meta charset="UTF-8">
+  <title>Registros de Proyectos</title>
+  <script defer src="registros.js"></script>
 </head>
 <body>
-    <h1>Datos recibidos del proyecto</h1>
-    <ul id="datos-proyecto"></ul>
-    <script src="registro.js"></script>
+  <h1>Lista de Proyectos</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre del proyecto</th>
+        <th>Tiempo estimado</th>
+        <th>Tiempo real</th>
+        <th>Coste</th>
+        <th>Observaciones</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-proyectos"></tbody>
+  </table>
 </body>
 </html>
