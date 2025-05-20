@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Nombre: nombre,
       Estimado: estimado,
       Real: real,
-      Coste: (real * costeHora).toFixed(2),
+      Coste: (estimado * costeHora).toFixed(2), // Cambiado a estimado * costeHora
       Observaciones: observaciones,
       Fecha: fecha
     };
@@ -34,4 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("📦 Proyectos guardados:", proyectos);
   });
 });
-
