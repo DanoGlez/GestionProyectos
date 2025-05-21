@@ -1,0 +1,34 @@
+[
+  {
+    "Nombre": "Tienda Jabones",
+    "Estimado": 6757,
+    "Real": 75675,
+    "Coste": "5649636237450.00",
+    "Observaciones": "4eryte",
+    "Fecha": "2025-05-23"
+  },
+  {
+    "Nombre": "Game",
+    "Estimado": 12,
+    "Real": 10,
+    "Coste": "5000.00",
+    "Observaciones": "ge'wg9h'",
+    "Fecha": "2025-05-26"
+  },
+  {
+    "Nombre": "Game",
+    "Estimado": 12,
+    "Real": 10,
+    "Coste": "5000.00",
+    "Observaciones": "ge'wg9h'",
+    "Fecha": "2025-05-26"
+  },
+  {
+    "Nombre": "Tienda Jabones",
+    "Estimado": 50,
+    "Real": 20,
+    "Coste": "2500.00",
+    "Observaciones": "Bine",
+    "Fecha": "2025-05-23"
+  }
+]
