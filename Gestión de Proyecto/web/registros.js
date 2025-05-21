@@ -35,8 +35,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
   });
-<<<<<<<< HEAD:Gestión de Proyecto/web/registros.js
 });
-========
-});
->>>>>>>> origin/master:web/registros.js
