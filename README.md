@@ -106,18 +106,71 @@ La API expone los siguientes endpoints:
 
 ---
 
-## Personalización
+## Detalle de Carpetas y Archivos
 
-- Si cambias la URL o el puerto de la API, modifica la constante `API_URL` en los archivos JS del frontend.
-- Los estilos pueden personalizarse editando `styles.css` y `registros/form.css`.
+### Backend (`api/`)
+
+- **`src/app.js`**: Configura y arranca el servidor Express, carga dinámicamente las rutas desde `src/routes/` y habilita CORS y JSON.
+- **`src/routes/informacion.js`**: Expone los endpoints `/api/informacion` para obtener (GET) y registrar (POST) proyectos. El POST asigna un ID autoincremental y guarda los datos en `data/informacion.json`.
+- **`data/informacion.json`**: Archivo donde se almacenan los proyectos en formato JSON. Ejemplo de contenido:
+
+```json
+[
+  {
+    "ID": 1,
+    "Nombre": "App Móvil",
+    "Estimado": 120,
+    "Real": 135,
+    "Coste": 20.5,
+    "Observaciones": "Cambio de requisitos",
+    "Fecha": "2025-06-01"
+  }
+]
+```
+- **`package.json`**: Define las dependencias (`express`, `cors`, `nodemon`) y los scripts para desarrollo y producción.
+
+### Frontend (`web/`)
+
+- **`index.html`**: Página principal. Muestra la tabla de proyectos y un enlace para registrar uno nuevo.
+- **`index.js`**: Obtiene los proyectos desde la API y los muestra en la tabla.
+- **`index.css`**: Estilos generales para la tabla y la página principal.
+- **`registros/index.html`**: Formulario para registrar un nuevo proyecto. Incluye campos para nombre, tiempos, coste, observaciones y fecha.
+- **`registros/registros.js`**: Captura los datos del formulario y los envía a la API usando `fetch` (POST). Calcula el coste como `Estimado * coste por hora`.
+- **`registros/form.css`**: Estilos para el formulario de registro.
 
 ---
 
-## Notas
+## Ejemplo Visual
 
-- El backend guarda los datos en un archivo JSON local (`api/data/informacion.json`).
-- No hay autenticación ni control de usuarios.
-- El proyecto es solo para fines educativos y no debe usarse en producción sin mejoras de seguridad.
+### Tabla de proyectos (`web/index.html`)
+
+| ID | Nombre        | Estimado | Real | Coste | Observaciones           | Fecha      |
+|----|--------------|----------|------|-------|------------------------|------------|
+| 1  | App Móvil    | 120      | 135  | 20.5  | Cambio de requisitos   | 2025-06-01 |
+
+### Formulario de registro (`web/registros/index.html`)
+
+- **Nombre**: Texto
+- **Tiempo estimado**: Número
+- **Tiempo real**: Número
+- **Coste**: Número (coste por hora)
+- **Observaciones**: Texto
+- **Fecha de entrega**: Fecha
+
+---
+
+## Ampliación y Personalización
+
+- Puedes modificar los campos del formulario o la tabla editando los archivos HTML y JS correspondientes.
+- Para cambiar la lógica de cálculo del coste, edita `web/registros/registros.js`.
+- Los estilos pueden personalizarse en `index.css` y `registros/form.css`.
+- Si deseas agregar validaciones o nuevos endpoints, modifica los archivos en `api/src/routes/`.
+
+---
+
+## Créditos y Licencia
+
+Proyecto educativo. Puedes modificarlo libremente para tus prácticas o aprendizaje.
 
 ---
 
